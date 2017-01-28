@@ -3,12 +3,111 @@
 <head>
 <meta charset="UTF-8">
 <title>kitkatyj</title>
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
 </head>
 
-<body>
-	<h1>kitkatyj</h1>
-    <h2>Home of Kat Y.J.</h2>
-    <p>Under construction. Whee~</p>
+<body class="container">
+    <div class="character" id="pistachio"></div>
+    <div class="character" id="spacepony"></div>
+    <div id="twinkle"></div>
+	<header>
+    	<a href="/" class="title"><h1>kitkatyj</h1></a>
+        <nav>
+        	<ul>
+                <li id="explore-link"><a href="#explore">Explore</a></li>
+                <li id="portfolio-link"><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+        	</ul>
+        </nav>
+    </header>
+    <section id="fold">
+    	<h2>The Home of Kat Y.J.</h2>
+        <p class="subtext">A little space unicorn exploring the universe.</p>
+    </section>
+    
+    <section id="explore">
+    	<h2>Explore</h2>
+        <p>~ Work in progress! ~</p>
+        <ul>
+        	<li><a href="/sandbox">Sandbox Elements</a></li>
+        </ul>
+    </section>
+    
+    <section id="portfolio">
+    	<h2>Portfolio</h2>
+        <section id="portfolio-main" class="row">
+        	<section id="video">
+            	<h3 class="text-uppercase">Video</h3>
+        		<p>Actively managing YouTube channels since 2012</p>
+                <ul class="portfolio-list">
+                    <a href="https://www.youtube.com/user/katyj98" target="_blank">
+                        <li id="katyj98" class="channel">
+                        <img src="img/kitkatyj-design-assets/katyj98icon.png" height="96"alt=""/>
+                        <section class="info">
+                            <p class="channel-title">katyj98</p>
+                            <p>28,000+ subscribers</p>
+                        </section>
+                    </li>
+                    </a>
+                    
+                    <a href="https://www.youtube.com/user/daspacepony" target="_blank">
+                    <li id="daspacepony" class="channel">
+                        <img src="img/kitkatyj-design-assets/daspaceponyicon.png" height="96" alt=""/>
+                        <section class="info">
+                            <p class="channel-title">daspacepony</p>
+                        <p>1,600+ subscribers</p>
+                        </section>
+                    </li>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCQYFUBAdXY5PP0t1M1cK3JA" target="_blank">
+                    <li id="kitkatyj" class="channel">
+                        <img src="img/kitkatyj-design-assets/kitkatyjicon.png" height="96" alt=""/>
+                        <section class="info">
+                            <p class="channel-title">kitkatyj</p>
+                        <p>140+ subscribers</p>
+                        </section>
+                        
+                    </li>
+                    </a>
+                </ul>
+            </section>
+            <section id="webdev">
+            	<h3 class="text-uppercase">Web Dev.</h3>
+                <p>Bringing Design &amp; Program together</p>
+                <ul class="portfolio-list">
+                	<li id="worldskills" class="dev">
+                        <img src="img/kitkatyj-design-assets/worldskillslogo.png" height="128" alt=""/>
+                        <section class="info">
+                            <p class="dev-title">Silver Award</p>
+                        <p>Worldskills Singapore 2016 - Web Design</p>
+                        </section>
+                    </li>
+                </ul>
+            </section>
+        </section>
+    </section>
+    <section id="about">
+    	<h2>About me</h2>
+        <section id="about-main">
+        <img id="photo-id" src="img/kitkatyj-design-assets/about.jpg" width="360" height="360" alt="Photo of Kat Y.J."/>
+        <section id="about-info">
+        <h3>Kat Y.J.</h3>
+        <p>Hi! I’m a student from the sunny island of Singapore studying Multimedia &amp; Infcomm Technology. I have experience in video editing, motion graphics design and web development. I love animation, astronomy, innovative technology among other things. </p>
+        <p>I let my work speak for itself and let it speak for all of us.</p>
+        <ul id="social">
+        	<li class="social-link" id="social-twitter"><a href="https://twitter.com/kitkatyj" target="_blank">Twitter</a></li>
+        	<li class="social-link" id="social-deviantart"><a href="http://kitkatyj.deviantart.com" target="_blank">deviantArt</a></li>
+        </ul>
+        </section>
+        </section>
+    </section>
+    <footer>
+    	<p>Copyright &copy; Kat Y.J, 2017.</p>
+    </footer>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/kitkatyj.js"></script>
 </body>
 </html>
