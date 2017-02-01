@@ -278,6 +278,11 @@ li > section.info p.channel-title, li > section.info p.dev-title {
     margin-top:0;
 }
 
+#photo-id {
+    width:360px;
+    height:360px;
+}
+
 #social li.social-link, #social li.social-link a {
     display:inline-block;
 }
