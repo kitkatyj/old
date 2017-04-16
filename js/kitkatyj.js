@@ -34,7 +34,7 @@ function init(){
     });
     
     function updateChannelsSubCount(){
-        console.log(channelSubs);
+        //console.log(channelSubs);
         
         $('#video .portfolio-list a li .info .subcount').each(function(n,e){
             e.textContent = channelSubs[n] + " subscribers";

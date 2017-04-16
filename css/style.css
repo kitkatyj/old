@@ -190,28 +190,64 @@ header nav ul li a:hover{
     display:flex;
     justify-content: center;
     margin:32px 0;
+    flex-flow:row wrap;
 }
 
 #explore li, #explore li a {
-    display:table-cell;
-    width:128px;
-    height:128px;
-    border-radius: 64px;
-    text-align: center;
-    vertical-align: middle;
+    width:196px;
+    height:196px;
     color:black;
-    font-size: 1.1em;
-    
+    font-size: 1em;
+    font-weight: bold;    
 }
 
 #explore li {
-    background-color:#ccccff;
-    transition:0.2s all;
+    margin:8px;
+    background-color:rgba(204, 204, 255, 0.5);
+    /*transition:0.2s all;
+    -webkit-transition:0.2s all;*/
+    box-sizing: content-box;
+    overflow: hidden;
+}
+
+#explore li a {
+    display:block;
+    position:relative;
+}
+
+#explore li a p {
+    display:block;
+    width:196px;
+    padding:0.5em;
+    text-align: right;
+    background-color:rgba(255,255,255,0.8);
+    position:absolute;
+    /*opacity:0;*/
+    bottom:0;
+    transform: translateY(192px);
+    margin:0;
+    transition:0.2 all;
+    -webkit-transition:0.2s all;
 }
 
 #explore li:hover {
-    background-color:#ddddff;
-    transform: scale(1.1);
+    background-color:rgba(204, 204, 255, 0.8);
+    box-shadow: 0 0 0 2px white;
+}
+
+#explore li:hover a p {
+    /*opacity:1;*/
+    transform: translateY(0px);
+}
+
+#explore li#sandbox {
+    background-image: url(../img/explore-icons-01.svg);
+    background-size:contain;
+}
+
+#explore li#spaceunicorn-ss {
+    background-image: url(../img/explore-icons-02.svg);
+    background-size:contain;
 }
 
 #portfolio-main {
