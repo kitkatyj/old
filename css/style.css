@@ -146,6 +146,8 @@ header {
     justify-content: space-between;
 }
 
+header nav {z-index:9;}
+
 header nav ul {
     margin:0;
     text-align: center;
@@ -179,7 +181,12 @@ header nav ul li a:hover{
     align-items: center;
 }
 
-#fold h2 {font-size: 3em; font-weight: bold;}
+#fold h2 {
+    font-size: 3em; 
+    font-weight: bold; 
+    z-index:9;
+}
+
 #fold p.subtext {font-size: 1.2em; text-align: center;}
 
 #explore {
@@ -191,11 +198,12 @@ header nav ul li a:hover{
     justify-content: center;
     margin:32px 0;
     flex-flow:row wrap;
+    align-items: flex-start;
 }
 
 #explore li, #explore li a {
     width:196px;
-    height:196px;
+    height:auto;
     color:black;
     font-size: 1em;
     font-weight: bold;    
@@ -204,15 +212,16 @@ header nav ul li a:hover{
 #explore li {
     margin:8px;
     background-color:rgba(204, 204, 255, 0.5);
-    /*transition:0.2s all;
-    -webkit-transition:0.2s all;*/
+    transition:0.2s all;
+    -webkit-transition:0.2s all;
     box-sizing: content-box;
-    overflow: hidden;
+    background-size:contain;
+    background-repeat: no-repeat;
 }
 
 #explore li a {
     display:block;
-    position:relative;
+    padding-top:196px;
 }
 
 #explore li a p {
@@ -221,13 +230,7 @@ header nav ul li a:hover{
     padding:0.5em;
     text-align: right;
     background-color:rgba(255,255,255,0.8);
-    position:absolute;
-    /*opacity:0;*/
-    bottom:0;
-    transform: translateY(192px);
     margin:0;
-    transition:0.2 all;
-    -webkit-transition:0.2s all;
 }
 
 #explore li:hover {
@@ -235,20 +238,14 @@ header nav ul li a:hover{
     box-shadow: 0 0 0 2px white;
 }
 
-#explore li:hover a p {
-    /*opacity:1;*/
+/*#explore li:hover a p {
+    opacity:1;
     transform: translateY(0px);
-}
+}*/
 
-#explore li#sandbox {
-    background-image: url(../img/explore-icons-01.svg);
-    background-size:contain;
-}
+#explore li#sandbox {background-image: url(../img/explore-icons-01.svg);}
 
-#explore li#spaceunicorn-ss {
-    background-image: url(../img/explore-icons-02.svg);
-    background-size:contain;
-}
+#explore li#spaceunicorn-ss {background-image: url(../img/explore-icons-02.svg);}
 
 #portfolio-main {
     display:flex;
