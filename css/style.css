@@ -85,7 +85,6 @@ ul {padding:0;}
 html {
     background-color:#000033;
     background-image:url(../img/stars-01.svg);
-    background-size:300px;
     z-index: -1;
     min-height: 100%;
 }
@@ -244,8 +243,8 @@ header nav ul li a:hover{
 }*/
 
 #explore li#sandbox {background-image: url(../img/explore-icons-01.svg);}
-
 #explore li#spaceunicorn-ss {background-image: url(../img/explore-icons-02.svg);}
+#explore li#graphtransformer {background-image: url(../img/explore-icons-03.svg);}
 
 #portfolio-main {
     display:flex;
