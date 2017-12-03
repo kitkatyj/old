@@ -76,7 +76,7 @@ a:hover{
 }
 
 h2,h3,h4 {color:white;}
-h2 {font-size: 2em;}
+h2 {font-size: 2em; font-weight: bold;}
 h3 {font-size: 1.5em;}
 
 li {list-style: none;}
@@ -85,6 +85,7 @@ ul {padding:0;}
 html {
     background-color:#000033;
     background-image:url(../img/stars-01.svg);
+    background-attachment: fixed;
     z-index: -1;
     min-height: 100%;
 }
@@ -195,7 +196,7 @@ header nav ul li a:hover{
 #explore ul {
     display:flex;
     justify-content: center;
-    margin:32px 0;
+    margin:0;
     flex-flow:row wrap;
     align-items: flex-start;
 }
@@ -218,14 +219,23 @@ header nav ul li a:hover{
     background-repeat: no-repeat;
 }
 
+#explore li.feature {
+    width: auto;
+}
+#explore li.feature iframe {
+    height:360px;
+    width:640px;
+    margin-bottom: -6px;
+}
+
 #explore li a {
     display:block;
     padding-top:196px;
 }
 
-#explore li a p {
+#explore li p {
     display:block;
-    width:196px;
+/*    width:196px;*/
     padding:0.5em;
     text-align: right;
     background-color:rgba(255,255,255,0.8);
@@ -237,67 +247,12 @@ header nav ul li a:hover{
     box-shadow: 0 0 0 2px white;
 }
 
-/*#explore li:hover a p {
-    opacity:1;
-    transform: translateY(0px);
-}*/
-
 #explore li#sandbox {background-image: url(../img/explore-icons-01.svg);}
 #explore li#spaceunicorn-ss {background-image: url(../img/explore-icons-02.svg);}
 #explore li#graphtransformer {background-image: url(../img/explore-icons-03.svg);}
-
-#portfolio-main {
-    display:flex;
-    justify-content:space-between;
-}
-
-#portfolio-main > section {
-    width:50%;
-    max-width: 480px;
-    padding:1em;
-}
-
-#portfolio-main > section > h3, #portfolio-main > section > p {
-    text-align: center;
-}
-
-#portfolio-main > section > h3 {margin-top:0; font-weight: bold;}
-
-li.channel, li.dev {
-    background-color: #333366;
-    padding:1em;
-    display:flex;
-    margin-bottom: 1em;
-    transition:0.2s transform, background-color;
-}
-
-li.channel:hover, li.dev:hover {
-    background-color: #444477;
-    transform: scale(0.99);
-}
-
-li.channel > img, li.dev > img {
-    height:72px;
-}
-
-li > section.info {
-    margin-left:1em;
-    display:flex;
-    flex-flow:column;
-    justify-content: center;
-}
-
-li > section.info p {
-    color:#ccccff;
-    margin:0;
-    font-size: 1em;
-}
-
-li > section.info p.channel-title, li > section.info p.dev-title {
-    font-size: 1.2em;
-    color:white;
-    font-weight: bold;
-}
+#explore li#katyj98 {background-image: url(../img/explore-icons-04.svg);}
+#explore li#daspacepony {background-image: url(../img/explore-icons-05.svg);}
+#explore li#kitkatyj {background-image: url(../img/explore-icons-06.svg);}
 
 #about-main {
     display:flex;
@@ -354,7 +309,7 @@ footer {
     }
     
     #twinkle {
-        position:absolute;
+        position:fixed;
         top:0;
         left:0;
         right:0;
@@ -365,6 +320,7 @@ footer {
         overflow: hidden;
 
         background-image:url(../img/twinkling-tinted.png);
+        background-attachment: fixed;
 
         -moz-animation:move-twink-back 200s linear infinite;
         -ms-animation:move-twink-back 200s linear infinite;
@@ -409,6 +365,10 @@ footer {
         width:240px;
         height:240px;
     }
+    #explore li.feature iframe {
+        width:426.67px;
+        height:240px;
+    }
 }
 
 @media screen and (max-width: 560px){
@@ -435,6 +395,10 @@ footer {
     #about-info h3 {
         text-align: center;
     }
+    #explore li.feature {
+        width:auto;
+    }
+    
 }
 
 @media screen and (max-width: 480px){
@@ -448,5 +412,8 @@ footer {
         width:225px;
         height:225px;
         left:0px;
+    }
+    #explore li.feature,#explore li.feature iframe {
+        width:196px;
     }
 }
