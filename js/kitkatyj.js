@@ -9,29 +9,40 @@ function init(){
     var channelSubs = [];
     var requests = channels.length;
     
+    var http = new XMLHttpRequest();
+    var key = "AIzaSyDSfEKjKq-SDRhT-Xv0Fni51QWbOAnDWFU";
+    var chString = "";
     channels.forEach(function(ch,i){
-        var http = new XMLHttpRequest();
-        var key = "AIzaSyCWLVKI8zx8ckfsjxzfVtLOLswGnRF8-yg";
-        var req = "https://www.googleapis.com/youtube/v3/channels?id="+ch+"&key="+key+"&part=statistics";
+        chString += ch;
+        if(i < requests-1) chString += ",";
+    });
     
-        // Get channel stats
-        http.open('GET', req, true);
-        http.send();
+    var req = "https://www.googleapis.com/youtube/v3/channels?id="+chString+"&key="+key+"&part=statistics";
+    console.log(req);
 
-        http.onreadystatechange = processRequest;
+    // Get channel stats
+    http.open('GET', req, true);
+    http.send();
 
-        function processRequest(e) {
-            if (http.readyState == 4 && http.status == 200) {
-                var resp = JSON.parse(http.responseText);
-                //console.log(resp.items[0].statistics.subscriberCount);
-                channelSubs[i] = resp.items[0].statistics.subscriberCount;
-                
+    http.onreadystatechange = processRequest;
+
+    function processRequest(e) {
+        if (http.readyState == 4 && http.status == 200) {
+            var resp = JSON.parse(http.responseText);
+            resp.items.forEach(function(chData,i){       
+                channels.forEach(function(ch,j){
+                    if(chData.id === ch){
+                        channelSubs[j] = chData.statistics.subscriberCount;
+                    }
+                });
+
                 requests--;
 
                 if(requests <= 0) updateChannelsSubCount();
-            }
+            });
         }
-    });
+    }
+    
     
     function updateChannelsSubCount(){
         $('#explore .subcount').each(function(n,e){
